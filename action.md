@@ -102,5 +102,60 @@ $$
 We can see
 
 $$
-d\mathcal{L} = \frac{\partial \mathcal{L}}{\partial \phi} d\phi + \frac{\partial \mathcal{L}}{\partial (\frac{\partial \phi}{\partial x})} d(\frac{\partial \phi}{\partial x}) + \frac{\partial \mathcal{L}}{\partial (\frac{\partial \phi}{\partial t})} d(\frac{\partial \phi}{\partial t})
+d\mathcal{L} = -\frac{1}{c^2} \frac{\partial\phi}{\partial t} \frac{\partial \epsilon}{\partial t} - \frac{\partial \phi}{\partial x} \frac{\partial \epsilon}{\partial x} - \kappa^2 \phi \epsilon
+$$
+
+We can then apply the same IBP trick twice as before to get (leaving out some terms because they vanish after integration over spacetime)
+
+$$
+d\mathcal{L} = \epsilon (-\frac{1}{c^2} \frac{\partial^2\phi}{\partial t^2} + \frac{\partial^2 \phi}{\partial x^2} - \kappa^2 \phi)
+$$
+
+Putting this in $dS$ we can easily see
+
+$$
+\kappa^2 \phi = - \frac{1}{c^2} \frac{\partial^2\phi}{\partial t^2} + \frac{\partial^2 \phi}{\partial x^2}
+$$
+
+MOTHER OF GOD.
+
+We can see that, as long as $\omega^2/c^2 - k^2 = \kappa^2$, the plane wave of form $A e^{i(kx - \omega t)}$ is a solution to this equation.
+
+Applying this to quantum theory, we know each wave is a particle, so with $\psi(x, t) \propto e^{i(px - E t)/\hbar}$ as long as m.n$E^2 = p^2 c^2 + m^2 c^4$ such that $m = \hbar \kappa/c$.
+
+## Some other systems
+**Spin 1/2**: Dirac Lagrangian
+
+$$
+\mathcal{L} = i \sum_\mu \bar{\Psi} \gamma^\mu \frac{\partial \Psi}{\partial x^\mu} - m \bar{\Psi} \Psi
+$$
+
+with equation of motion being
+
+$$
+i \sum_\mu \gamma^\mu \frac{\partial \Psi}{\partial x^\mu} = m \Psi
+$$
+
+**Spin 1**: Maxwell Lagrangian
+
+$$
+\mathcal{L} = -\frac{1}{4} \sum_{\mu,\nu} F_{\mu\nu} F^{\mu\nu}
+$$
+
+with equation of motion being
+
+$$
+\sum_\nu \frac{\partial F^{\mu\nu}}{\partial x^\nu} = 0
+$$
+
+**Spin 2**: Einstein-Hilbert Lagrangian
+
+$$
+\mathcal{L} = \frac{1}{16\pi G} \sum_{\mu\nu} g^{\mu\nu} R_{\mu\nu}
+$$
+
+with equation of motion being
+
+$$
+R_{\mu\nu} = 0
 $$

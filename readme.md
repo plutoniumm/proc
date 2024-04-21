@@ -1,1 +1,5 @@
-## just some basic math notes for me
+## notes
+
+Index
+- [Cubic & Quartic](./cubic.md)
+- [Lagrangian Mech](./action.md)
