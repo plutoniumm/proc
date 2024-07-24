@@ -1,5 +1,3 @@
 ## notes
 
-Index
-- [Cubic & Quartic](./cubic.md)
-- [Lagrangian Mech](./action.md)
+some smol notes for me for math to get through topics fast.

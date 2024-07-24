@@ -5,6 +5,7 @@
 
 - Math
 - - [Cubics](/math/cubics.md)
+- - [Algebra](/math/algebras.md)
 
 - Minis
 - - [Math](/mini/math.md)
