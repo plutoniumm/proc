@@ -4,10 +4,10 @@
 - - [Action](/phy/action.md)
 
 - Math
-- - [Cubics](/math/cubics.md)
+- - [Cubics](/math/cubic.md)
 - - [Algebra](/math/algebras.md)
 
 - Minis
 - - [Math](/mini/math.md)
 - - [Physics](/mini/phy.md)
-- - [Econ](/mini/eco.md)
+- - [Econ](/mini/econ.md)

@@ -1,5 +1,8 @@
 # Algebras and Topologies
 
+## Defns
+- **Homeomorphism**: If you can mould one space into another without tearing or gluing, via dough.
+
 ## Measure
 A measure is anything that assigns a non-negative real number to the subsets of some set $X$.
 

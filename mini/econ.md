@@ -9,3 +9,8 @@ Without the GSA, banks could take deposits and invest them in the stock market. 
 The Gramm–Leach–Bliley Act (GLBA) ended the GSA in 1999, which most argue lead to 2008 (among other things).
 
 The GLBA also allowed banks to merge with insurance companies and investment banks.
+
+> The purpose of damned if you do, damned if you don't is to make sure you're damned.
+
+## Meritocracy
+Adrian Wooldridge, co-author of "The Aristocracy of Talent", says that meritocracy is the idea that the talented should rise to the top. And when there is not a meritocratic system, then unless there is random selection, historically we have reduced to either nepotism or dynastic rule.
