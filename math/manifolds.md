@@ -58,4 +58,29 @@ For an arbitrary manifold, the metric tensor is a matrix that varies from point 
 ### Pseudo-Riemannian Manifold
 A pseudo-Riemannian manifold is a manifold with a metric tensor may not be positive definite. This is useful in general relativity where the metric tensor is used to describe the curvature of spacetime.
 
+### Reimannian Metric
+When we make the tangent space $T_pM$ for a given manifold $M$, it may not come equipped with it's own metric, making it difficult to define the length of a vector. A Riemannian metric is a smooth assignment of an inner product to each tangent space that varies smoothly from point to point.
+
+### Covariant Derivative
+The covariant derivative measures how one tensor field changes in the direction of a vector field while also taking the curvature of the underlying space into account. In coordinates, this means that we compute the directional derivative as in flat space but we now also have extra terms (i.e. the Christoffel symbols) that tell us how the basis vectors change. More precisely
+
+for some vector $v$ on metric $g$, let's say we were to change the coordinates to some new system $X$ (from $x$), then how do we get the new vector, $V = v \frac{dX}{dx}$. But this is incorrect since $V$ cannot vary. So we add an extra term to the derivative to create a new covariant derivative
+
+$$
+\nabla_v = \frac{d}{dX} + G^{-1} \frac{dG}{dX}
+$$
+
+Where we can see $\nabla_v G = 0$ since now the derivative accounts for the variation of the metric itself too. More generally we write
+
+$$
+\nabla_a v^b = \partial_a v^b + \Gamma^b_{ac}v^c
+$$
+
+By virtue of the fact that the correction factor is a log derivative, we can linearize even multiplicative changes in the metric tensor.
+
+
 ## Connections
+A connection generalises the idea of 'transporting' local geometric structures along some manifold.
+
+### Affine Connection
+On a surface of a ball let's say, it's the idea of moving the tangent space PARALLEL to the ball's surface. So a plate touching the ball at a point, and then moving it parallel to the surface
