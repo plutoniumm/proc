@@ -22,6 +22,53 @@ In order to allow for $\sigma$-additivity, we need to define an outer measure $\
 - Countable additivity: for arbitrary sets $A, B_1, B_2, \ldots \in X$ \
 if $A \subseteq \bigcup_{i=1}^{\infty} B_i$ then $\mu^*(A) \le \sum_{i=1}^{\infty} \mu^*(B_i)$
 
+### Haar Measure
+Anything is a Haar measure on any set $G$, as long as it satisfies the following properties:
+- $0 \le \mu(U) \le \infty \forall U \in G$
+-  $\mu(xE)=\mu(E) \forall x \in G$ and every measurable $E \in G$.
+
+We can measure the size $m(S)$ of a subset $S$ of $\mathbb{R}$ simply by the integral $m(S) = \int_S 1 dx$. If $S = [a,b]$ is an interval, this gives the length $m(S) = b-a$
+
+> Here we can think of that $dx$ as a measure (technically it's not, but I ignore that here)
+
+If $S = [a,b]$ then $m(S) = b-a$. If $S = [a,b) \cup [c,d]$ then $m(S) = b-a + d-c$, which also means if $S = [a+c, b+c]$ then $m(S) = b-a$. We can see that the measure is translation invariant such that $d(x + c) = d(x)$.
+
+What about a multiplicative group of $\mathbb{R}^+$ such that $m(S) = m(cS)$. Then obviously $\int_S 1 dx$ will not fly. So can use $\int_S \frac{dx}{x}$ which is invariant under multiplication, such that $\frac{d(cx)}{cx} = \frac{dx}{x}$.
+
+And therefore $m([a, b]) = \int_{[a,b]} \frac{dx}{x} = \log \frac{b}{a} = \log \frac{cb}{ca} = \int_{[ca, cb]} \frac{dx}{x} = m([ca, cb])$
+
+Consider a complicated example from group of upper triangular matrices
+
+$$
+G=\left\{\left(\begin{array}{cc}\sqrt{y}&\frac{x}{\sqrt y}\\0&\frac1{\sqrt{y}}
+\end{array}\right)\mid x,y\in\mathbb{R},y>0\right\}.
+$$
+
+then for a 'fixed' element $g(r,s)$ in $G$ we have
+
+$$
+(g(r,s)g(x,y))^{-1}d(g(r,s)g(x,y))=g(x,y)^{-1}g(r,s)^{-1}g(r,s)dg(x,y)
+=g(x,y)^{-1}dg(x,y),
+$$
+
+Therefore the measure for $G$ is $d(g) = \frac{dy * dx}{2y}$ for some group operation $(*)$.
+
+One can thus construct a Haar random unitary as
+
+$$
+U(\phi, \theta, \omega) = \begin{pmatrix}
+e^{-i(\phi + \omega)/2} \cos(\theta/2) & -e^{i(\phi - \omega)/2} \sin(\theta/2) \\
+e^{-i(\phi - \omega)/2} \sin(\theta/2) & e^{i(\phi + \omega)/2} \cos(\theta/2)
+\end{pmatrix}
+$$
+
+Such that we sample $\phi, \theta, \omega$ from a Haar measure on $[0, 2\pi] \times [0, \pi] \times [0, 2\pi]$.
+
+### Process to Generate Equivalent Distribution
+- Generate a random matrix $Z$ with complex numbers $a+bi$ where $a, b \sim \mathcal{N}(0, 1)$
+- Compute the QR decomposition $Z = QR$
+- Compute the diagonal matrix $\Lambda = \text{diag}(R_{ii}/|R_{ii}|)$
+- Compute $Q' = Q\Lambda$ which will be Haar-random
 
 ## Algebra over $X$
 An algebra over a set, moere commonly called a field of sets, is structure of a pair $(X, \mathcal{F})$ where $\mathcal{F}$ is a collection of subsets of $X$ that:
