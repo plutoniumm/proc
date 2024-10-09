@@ -2,6 +2,7 @@
 
 - Physics
 - - [Action](/phy/action.md)
+- - [Hopf Fibration](/phy/hopf-fibration.md)
 
 - Math
 - - [Cubics](/math/cubic.md)
